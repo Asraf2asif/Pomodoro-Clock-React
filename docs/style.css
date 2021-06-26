@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+input[type=number].input-number–noSpinners {
+  -moz-appearance: textfield;
+}
+
+input[type=number].input-number–noSpinners::-webkit-inner-spin-button,
+input[type=number].input-number–noSpinners::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #293241;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+body #root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+body #root .app-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 1px solid #e0e0e0cc;
+  background: #1e555c;
+  padding: 20px;
+}
+body #root .app-card .timer-counter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+body #root .app-card .timer-counter .main-title {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  font-size: 46px;
+}
+body #root .app-card .timer-counter button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  background: #1e555c;
+  padding: 2px;
+}
+body #root .app-card .timer-counter .timer {
+  flex-basis: 127px;
+  min-width: 127px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0cc;
+  bottom: 25px;
+  left: 90px;
+}
+body #root .app-card .timer-counter .timer,
+body #root .app-card .timer-counter .timer #timer-label,
+body #root .app-card .timer-counter .timer #start_stop,
+body #root .app-card .timer-counter .timer #reset {
+  position: absolute;
+}
+body #root .app-card .timer-counter .timer #timer-label {
+  font-size: 20px;
+  top: -14px;
+  left: 32px;
+  background: #1e555c;
+}
+body #root .app-card .timer-counter .timer #time-left {
+  font-family: "Orbitron", sans-serif;
+  padding: 10px;
+}
+body #root .app-card .timer-counter .timer #start_stop,
+body #root .app-card .timer-counter .timer #reset {
+  top: 45px;
+}
+body #root .app-card .timer-counter .timer #start_stop {
+  left: 20px;
+}
+body #root .app-card .timer-counter .timer #reset {
+  right: 20px;
+}
+body #root .app-card .timer-counter .timer .btnText {
+  padding-top: 2px;
+}
+body #root .app-card .timer-counter svg {
+  transform: rotate(135deg);
+}
+body #root .app-card .timer-control-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 115px;
+}
+body #root .app-card .timer-control-holder .timer-control {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 1px solid #e0e0e0cc;
+  padding: 19px 5px 13px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  background: #1a4a50;
+}
+body #root .app-card .timer-control-holder .timer-control:not(:last-child) {
+  margin-right: 16px;
+}
+body #root .app-card .timer-control-holder .timer-control svg {
+  position: absolute;
+  top: -71px;
+  left: 18px;
+  transform: rotate(145deg);
+  width: 90px;
+  height: 90px;
+}
+body #root .app-card .timer-control-holder .timer-control .timer-control-img {
+  position: absolute;
+  top: -53px;
+  left: 39px;
+}
+body #root .app-card .timer-control-holder .timer-control .timer-control-img::before {
+  content: " ";
+  position: absolute;
+  background: #1a4a50;
+  display: block;
+  width: 101px;
+  height: 17px;
+  bottom: -11px;
+  border: 1px solid #e0e0e02e;
+  left: -23px;
+}
+body #root .app-card .timer-control-holder .timer-control .timer-control-img::after {
+  content: " ";
+  position: absolute;
+  background: #1a4a50;
+  display: block;
+  width: 70px;
+  height: 2px;
+  bottom: -13px;
+  left: -23px;
+}
+body #root .app-card .timer-control-holder .timer-control .timer-control-label {
+  position: absolute;
+  font-size: 15px;
+  top: -6px;
+  left: calc(100px / 4);
+}
+body #root .app-card .timer-control-holder .timer-control #session-label {
+  left: calc(100px / 5);
+}
+body #root .app-card .timer-control-holder .timer-control .timer-control-length input {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  flex-basis: 25px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 25px;
+  text-align: center;
+  border: 1px solid #e0e0e02e;
+  font-size: 20px;
+  padding: 2px 5px;
+}
+body #root .app-card .timer-control-holder .timer-control .range-control {
+  background: transparent;
+  position: absolute;
+  top: 45px;
+}
+body #root .app-card .timer-control-holder .timer-control button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+body #root .app-card .timer-control-holder .timer-control button i {
+  font-size: 20px;
+  padding: 0 5px;
+}
+body #root footer {
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  font-size: 0.5em;
+}
+body #root footer p {
+  text-align: center;
+  margin-top: 15px;
+}
+body #root footer a {
+  color: #eb7d4b;
+  text-decoration: none;
+}
+
+@media all and (max-width: 459px) {
+  .app-card {
+    transform: scale(0.85);
+  }
+
+  .timer-control:last-child {
+    margin-top: 100px;
+  }
+}
+input[type=range] {
+  height: 16px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #e3e3e3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #1e555c;
+  height: 9px;
+  width: 7px;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #e3e3e3;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #e3e3e3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #1e555c;
+  height: 9px;
+  width: 7px;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #e3e3e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #e3e3e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #1e555c;
+  height: 9px;
+  width: 7px;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #e3e3e3;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #e3e3e3;
+}
